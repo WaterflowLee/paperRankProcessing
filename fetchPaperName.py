@@ -2,8 +2,8 @@
 import xml.etree.cElementTree as ET 
 from pymongo import MongoClient
 client = MongoClient()
-conn = client.paper_rank
-collection = conn.papers
+db = client.paper_rank
+collection = db.papers
 
 file = '../../../raw_data/paper_info.xml'
 iterparser = ET.iterparse(file, events=('start', 'end'))
